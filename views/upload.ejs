@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Test upload</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="create-blog">
+    <!--  SINGLE FILE -->
+    <form action="/users/uploadfile" enctype="multipart/form-data"  method="POST">
+      <label for="myFile">Upload Single File</label>
+      <input type="file" name="myFile" id="myFile"/>
+      <input type="submit" value="Upload a file" />
+    </form>
+
+
+    <!-- MULTIPLE FILES -->
+    <form action="/users/uploadmultiple" enctype="multipart/form-data" method="POST">
+      <label for="myFiles">Upload Multiple Files</label>
+      <input type="file" name="myFiles" id="myFiles" multiple>
+      <input type="submit" value="Upload your files" />
+     </form>
+
+    <!--   PHOTO-->
+    <form action="/users/upload/photo" enctype="multipart/form-data" method="POST">
+      <label for="myImage">Upload Image</label>
+      <input type="file" name="myImage" id="myImage" accept="image/*" />
+      <input type="submit" value="Upload Photo" />
+    </form>
+  </div>
+</body>
+
+</html>
